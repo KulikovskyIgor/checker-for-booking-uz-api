@@ -15,6 +15,10 @@ app.use(morgan('dev'));
 app.use(cors());
 app.use(bodyParser.json());
 
+app.get('/', function(req, res) {
+    res.send("Welcome checker-for-booking-uz-api");
+});
+
 app.post('/trains', function (req, res) {	
 	fetch(`${config.host}/train_search/`,
 		{
