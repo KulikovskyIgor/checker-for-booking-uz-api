@@ -24,6 +24,12 @@ app.post('/trains', function (req, res) {
 		{
 			method: 'POST',
 			body: toFormData(req.body),
+			headers: { 
+				'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
+				'Host': 'booking.uz.gov.ua',
+				'Origin': 'https://booking.uz.gov.ua',
+				'X-Requested-With': 'XMLHttpRequest',
+			},
 		})
 		.then(res => res.json())
 		.then(data => res.send(data))
