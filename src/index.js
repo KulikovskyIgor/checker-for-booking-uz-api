@@ -20,12 +20,28 @@ app.get('/', function(req, res) {
 });
 
 app.get('/test', function(req, res) {	
+	console.log("---0");
+	
 	fetch(`${config.host}/train_search/`,
 		{
 			method: 'POST',
 		})
-		.then(res2 => res2.json())
-		.then(data => res.send(data))
+		.then(res => {
+			console.log("---1", res)
+			return res;
+		})
+		.then(res => {
+			console.log("---2", res)
+			return res.json();
+		})
+		.then(data => {
+			console.log("---3", data);
+			res.send(data)
+		})
+		.catch(e => {
+			console.log("---4", e);
+			res.status(400).json({ error: e.message });
+		});
 });
 
 app.post('/trains', function (req, res) {	
