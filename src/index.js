@@ -19,6 +19,15 @@ app.get('/', function(req, res) {
     res.send("Welcome checker-for-booking-uz-api");
 });
 
+app.get('/test', function(req, res) {	
+	fetch(`${config.host}/train_search/`,
+		{
+			method: 'POST',
+		})
+		.then(res2 => res2.json())
+		.then(data => res.send(data))
+});
+
 app.post('/trains', function (req, res) {	
 	fetch(`${config.host}/train_search/`,
 		{
