@@ -22,9 +22,9 @@ app.get('/', function(req, res) {
 app.get('/test', function(req, res) {	
 	console.log("---0");
 	
-	fetch(`${config.host}/train_search/`,
+	fetch(`http://worldclockapi.com/api/json/est/now`,
 		{
-			method: 'POST',
+			method: 'GET',
 		})
 		.then(res => {
 			console.log("---1", res)
