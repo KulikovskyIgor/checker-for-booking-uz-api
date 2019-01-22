@@ -29,7 +29,7 @@ app.get('/test', function(req, res) {
 			headers: {
 				'Accept': '*/*',
 				'Accept-Encoding': 'gzip, deflate, br',
-				'Accept-Language:': 'uk-UA,uk;q=0.9,ru-RU;q=0.8,ru;q=0.7,en-GB;q=0.6,en;q=0.5,en-US;q=0.4',
+				'Accept-Language': 'uk-UA,uk;q=0.9,ru-RU;q=0.8,ru;q=0.7,en-GB;q=0.6,en;q=0.5,en-US;q=0.4',
 				'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',
 				'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
 				'Host': 'booking.uz.gov.ua',
